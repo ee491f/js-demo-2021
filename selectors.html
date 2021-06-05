@@ -1,0 +1,35 @@
+<html>
+  <head></head>
+  <html>
+    <p id="important-paragraph" class="important">first paragraph</p>
+    <p class="not-important">second paragraph</p>
+    <p class="not-important last">third paragraph</p>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+      $( document ).ready(function() {
+        console.log("hi, from internal JS");
+
+        console.log("all paragraphs");
+        let paragraphs = $("p");
+        console.log(paragraphs);
+
+        console.log("important paragraph");
+        let importantParagraph = $("p#important-paragraph.important");
+        console.log(importantParagraph);
+
+        console.log("not-important")
+        let notImportant = $(".not-important");
+        console.log(notImportant);
+
+        console.log("not-important and last")
+        let notImportantAndLast = $(".not-important.last");
+        console.log(notImportantAndLast);
+
+        console.log("$");
+        console.log($);
+        console.log("document");
+        console.log(document);
+      }); 
+    </script>
+  </html>
+</html>
